@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - BNUTS</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #FFD700; /* BNUTS Gold */
+      color: #001F3F; /* BNUTS Navy */
+      line-height: 1.6;
+    }
+    header {
+      background: #001F3F;
+      color: white;
+      padding: 1.2rem;
+      text-align: center;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    @media (min-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    h1, h2 {
+      margin-bottom: 20px;
+      color: #001F3F;
+    }
+    .info-item {
+      margin-bottom: 18px;
+      display: flex;
+      align-items: flex-start;
+    }
+    .info-item strong {
+      min-width: 100px;
+      color: #001F3F;
+    }
+    .social-links a {
+      display: inline-block;
+      margin-right: 12px;
+      color: #001F3F;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .social-links a:hover {
+      color: #FFC107;
+    }
+    nav {
+      background: #001F3F;
+      padding: 0.8rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    nav a:hover {
+      background: #FFC107; /* Warm Gold */
+      color: #001F3F;
+    }
+
+
+    form label {
+      display: block;
+      margin: 15px 0 6px;
+      font-weight: 600;
+    }
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #ddd;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    form input:focus,
+    form textarea:focus {
+      border-color: #FFC107;
+      outline: none;
+    }
+    .btn {
+      background: #001F3F;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #FFC107;
+      color: #001F3F;
+    }
+    .map-placeholder {
+      height: 200px;
+      background: #f0f0f0;
+      border: 1px dashed #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-style: italic;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #001F3F;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+     <img src="images/favicon.png" alt="BNUTS Logo" style="max-width: 150px; margin-bottom: 0.5rem;">
+    <div class="logo">BNUTS</div>
+    <div>Birifor National Union of Tertiary Students</div>
+  </header>
+
+<nav>
+    <a href="home.html" target="_blank">Home</a>
+    <a href="about.html" target="_blank">About</a>
+    <a href="membership.html" target="_blank">Membership</a>
+    <a href="stories.html" target="_blank">Events</a>
+    <a href="branches.html" target="_blank">Our Campuses</a>
+    <a href="news.html" target="_blank">News & Updates</a>
+    <a href="contact.html" target="_blank">Contact Us</a>
+  </nav>
+
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p style="text-align: center; margin-bottom: 30px; color: #001F3F;">
+      Have questions, feedback, or want to collaborate? Reach out to us!
+    </p>
+
+    <div class="contact-grid">
+      <!-- Contact Info -->
+      <div class="card">
+        <h2>Get in Touch</h2>
+
+        <div class="info-item">
+          <strong>Email:</strong>
+          <a href="mailto:info@bnuts.org" style="color: #001F3F; text-decoration: underline;">info@bnuts.org</a>
+        </div>
+
+        <div class="info-item">
+          <strong>Phone:</strong>
+          <span>+233 24 XXX XXXX</span>
+        </div>
+
+        <div class="info-item">
+          <strong>WhatsApp:</strong>
+          <a href="https://wa.me/23324XXXXXXX" target="_blank" style="color: #001F3F; text-decoration: underline;">Chat on WhatsApp</a>
+        </div>
+
+        <div class="info-item">
+          <strong>Address:</strong>
+          <span>BNUTS Secretariat<br>
+          [University Campus or P.O. Box]<br>
+          Ghana</span>
+        </div>
+
+        <h3 style="margin: 20px 0 10px;">Follow Us</h3>
+        <div class="social-links">
+          <a href="https://facebook.com/bnutsgh" target="_blank">Facebook</a>
+          <a href="https://instagram.com/bnutsgh" target="_blank">Instagram</a>
+          <a href="https://x.com/bnutsgh" target="_blank">X (Twitter)</a>
+          <a href="https://tiktok.com/@bnutsgh" target="_blank">TikTok</a>
+          <a href="https://chat.whatsapp.com/..." target="_blank">WhatsApp Group</a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="card">
+        <h2>Send a Message</h2>
+        <!-- 🔗 Replace YOUR_FORM_ID with your actual Formspree ID -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <label for="name">Your Name <span style="color:#d32f2f">*</span></label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email Address <span style="color:#d32f2f">*</span></label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="e.g. Membership Inquiry, Event Support">
+
+          <label for="message">Message <span style="color:#d32f2f">*</span></label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Optional: Map (for future use) -->
+    <!--
+    <div class="card" style="margin-top: 30px;">
+      <h2>Our Location</h2>
+      <div class="map-placeholder">
+        Google Maps will be embedded here soon
+      </div>
+    </div>
+    -->
+
+  </div>
+
+  <footer>
+    &copy; 2025 BNUTS. All rights reserved.
+  </footer>
+
+  <!-- BNUTS Cookie Notice -->
+<div id="cookie-notice" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#001F3F; color:white; padding:15px; text-align:center; font-size:0.95rem; z-index:9999;">
+  <p style="margin:0;">
+    We use cookies to improve your experience and analyze site traffic. By continuing to use this site, you agree to our 
+    <a href="privacy.html" style="color:#FFD700; text-decoration:underline;">Privacy Policy</a>.
+  </p>
+  <button id="cookie-accept" style="margin-top:10px; background:#FFD700; color:#001F3F; border:none; padding:6px 16px; border-radius:4px; font-weight:bold; cursor:pointer;">
+    Accept
+  </button>
+</div>
+
+<script>
+  // Check if user already accepted cookies
+  if (!localStorage.getItem('bnuts_cookies_accepted')) {
+    document.getElementById('cookie-notice').style.display = 'block';
+  }
+
+  // Accept button handler
+  document.getElementById('cookie-accept').addEventListener('click', function() {
+    localStorage.setItem('bnuts_cookies_accepted', 'true');
+    document.getElementById('cookie-notice').style.display = 'none';
+  });
+</script>
+
+</body>
+</html>

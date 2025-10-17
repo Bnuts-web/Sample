@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join BNUTS - Membership Form</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #FFD700;
+      color: #001F3F;
+      padding: 20px;
+    }
+    .container {
+      max-width: 700px;
+      margin: 30px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #001F3F;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #ddd;
+      border-radius: 6px;
+      font-size: 16px;
+      background: #fff;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #FFC107;
+      outline: none;
+    }
+    .btn {
+      background: #001F3F;
+      color: white;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 30px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn:hover {
+      background: #FFC107;
+      color: #001F3F;
+      transform: translateY(-2px);
+    }
+    .required {
+      color: #d32f2f;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Join BNUTS</h1>
+    <p style="text-align: center; margin-bottom: 20px; color: #555;">
+      Become part of the Birifor National Union of Tertiary Students
+    </p>
+
+    <!-- Replace YOUR_EMAIL with your actual email -->
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      
+      <div class="form-group">
+        <label for="fullname">Full Name <span class="required">*</span></label>
+        <input type="text" id="fullname" name="fullname" required placeholder="e.g. Kwame Birifor">
+      </div>
+
+      <div class="form-group">
+        <label for="index">Student Index Number <span class="required">*</span></label>
+        <input type="text" id="index" name="index" required placeholder="e.g. UGCS/00123/23">
+      </div>
+
+      <div class="form-group">
+        <label for="institution">Tertiary Institution <span class="required">*</span></label>
+        <select id="institution" name="institution" required>
+          <option value="">-- Select Your Institution --</option>
+          <option value="University of Ghana">University of Ghana</option>
+          <option value="Kwame Nkrumah University of Science and Technology">KNUST</option>
+          <option value="University of Cape Coast">University of Cape Coast</option>
+          <option value="University for Development Studies">UDS</option>
+          <option value="University of Education, Winneba">UEW</option>
+          <option value="Other">Other (Specify Below)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="other_institution">If "Other", Specify Institution</label>
+        <input type="text" id="other_institution" name="other_institution" placeholder="e.g. Accra Technical University">
+      </div>
+
+      <div class="form-group">
+        <label for="program">Program of Study</label>
+        <input type="text" id="program" name="program" placeholder="e.g. BSc Computer Science">
+      </div>
+
+      <div class="form-group">
+        <label for="level">Level of Study <span class="required">*</span></label>
+        <select id="level" name="level" required>
+          <option value="">-- Select Level --</option>
+          <option value="100">100 Level</option>
+          <option value="200">200 Level</option>
+          <option value="300">300 Level</option>
+          <option value="400">400 Level</option>
+          <option value="500">500 Level</option>
+          <option value="Masters">Masters</option>
+          <option value="PhD">PhD</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number <span class="required">*</span></label>
+        <input type="tel" id="phone" name="phone" required placeholder="+233 24 123 4567">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address <span class="required">*</span></label>
+        <input type="email" id="email" name="email" required placeholder="yourname@example.com">
+      </div>
+
+      <div class="form-group">
+        <label for="hometown">Hometown (Birifor Community)</label>
+        <input type ="text" id="hometown" name="hometown" placeholder="e.g. Tumu, Lambussie">
+      </div>
+
+      <div class="form-group">
+        <label for="how_heard">How did you hear about BNUTS?</label>
+        <select id="how_heard" name="how_heard">
+          <option value="">-- Select --</option>
+          <option value="Friend">Friend</option>
+          <option value="Social Media">Social Media</option>
+          <option value="Campus Event">Campus Event</option>
+          <option value="Alumni">Alumni</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="interests">Areas of Interest (Optional)</label>
+        <textarea id="interests" name="interests" rows="3" placeholder="e.g. Cultural events, leadership, academic support..."></textarea>
+      </div>
+
+      <button type="submit" class="btn">Submit Membership Application</button>
+    </form>
+  </div>
+
+  <!-- BNUTS Cookie Notice -->
+<div id="cookie-notice" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#001F3F; color:white; padding:15px; text-align:center; font-size:0.95rem; z-index:9999;">
+  <p style="margin:0;">
+    We use cookies to improve your experience and analyze site traffic. By continuing to use this site, you agree to our 
+    <a href="privacy.html" style="color:#FFD700; text-decoration:underline;">Privacy Policy</a>.
+  </p>
+  <button id="cookie-accept" style="margin-top:10px; background:#FFD700; color:#001F3F; border:none; padding:6px 16px; border-radius:4px; font-weight:bold; cursor:pointer;">
+    Accept
+  </button>
+</div>
+
+<script>
+  // Check if user already accepted cookies
+  if (!localStorage.getItem('bnuts_cookies_accepted')) {
+    document.getElementById('cookie-notice').style.display = 'block';
+  }
+
+  // Accept button handler
+  document.getElementById('cookie-accept').addEventListener('click', function() {
+    localStorage.setItem('bnuts_cookies_accepted', 'true');
+    document.getElementById('cookie-notice').style.display = 'none';
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Branches - BNUTS</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #FFD700; /* BNUTS Gold */
+      color: #001F3F; /* BNUTS Navy */
+      line-height: 1.6;
+    }
+    header {
+      background: #001F3F;
+      color: white;
+      padding: 1.2rem;
+      text-align: center;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .intro {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .intro p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #333;
+    }
+    .branches-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+    @media (min-width: 768px) {
+      .branches-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .branch-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
+    .branch-card:hover {
+      transform: translateY(-5px);
+    }
+
+    nav {
+      background: #001F3F;
+      padding: 0.8rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    nav a:hover {
+      background: #FFC107; /* Warm Gold */
+      color: #001F3F;
+    }
+    .branch-image {
+      width: 100%;
+      height: 180px;
+      background: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-style: italic;
+      font-size: 14px;
+      text-align: center;
+      padding: 10px;
+    }
+    .branch-info {
+      padding: 20px;
+    }
+    .branch-name {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #001F3F;
+    }
+    .branch-desc {
+      color: #555;
+      font-size: 0.95rem;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #001F3F;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+     <img src="images/favicon.png" alt="BNUTS Logo" style="max-width: 150px; margin-bottom: 0.5rem;">
+    <div class="logo">BNUTS</div>
+    <div>Birifor National Union of Tertiary Students</div>
+  </header>
+
+  <nav>
+    <a href="home.html" target="_blank">Home</a>
+    <a href="about.html" target="_blank">About</a>
+    <a href="membership.html" target="_blank">Membership</a>
+    <a href="stories.html" target="_blank">Events</a>
+    <a href="branches.html" target="_blank">Our Campuses</a>
+    <a href="news.html" target="_blank">News & Updates</a>
+    <a href="contact.html" target="_blank">Contact Us</a>
+  </nav>
+
+  <div class="container">
+    
+    <!-- Intro -->
+    <div class="intro">
+      <p>
+        As a growing and dynamic student organization, the Birifor National Union of Tertiary Students (BNUTS) is proud to have established strong and active branches across various tertiary institutions in Ghana. Each branch plays a critical role in representing Birifor students at the local level, fostering unity, and promoting academic and social development. Our nationwide presence ensures that no Birifor student is left behind, no matter where they study.
+      </p>
+    </div>
+
+    <!-- Branches Grid -->
+    <div class="branches-grid">
+
+      <!-- AAMUSTED -->
+      <div class="branch-card">
+        <div class="branch-image">
+          [AAMUSTED - Kumasi Campus]<br>
+          <small>Replace with campus photo</small>
+        </div>
+        <div class="branch-info">
+          <div class="branch-name">AAMUSTED - Kumasi Campus</div>
+          <div class="branch-desc">
+            Active BNUTS chapter promoting Birifor unity and academic excellence at the Akenten Appiah-Menka University of Skills Training and Entrepreneurial Development.
+          </div>
+        </div>
+      </div>
+
+      <!-- Sunyani Technical University -->
+      <div class="branch-card">
+        <div class="branch-image">
+          [Sunyani Technical University]<br>
+          <small>Replace with campus photo</small>
+        </div>
+        <div class="branch-info">
+          <div class="branch-name">Sunyani Technical University</div>
+          <div class="branch-desc">
+            A vibrant community of Birifor students engaged in cultural preservation, leadership development, and peer support.
+          </div>
+        </div>
+      </div>
+
+      <!-- University of Cape Coast -->
+      <div class="branch-card">
+        <div class="branch-image">
+          [University of Cape Coast]<br>
+          <small>Replace with campus photo</small>
+        </div>
+        <div class="branch-info">
+          <div class="branch-name">University of Cape Coast</div>
+          <div class="branch-desc">
+            One of BNUTS’ pioneering branches, known for its strong advocacy and inclusive student engagement on campus.
+          </div>
+        </div>
+      </div>
+
+      <!-- Catholic University of Ghana -->
+      <div class="branch-card">
+        <div class="branch-image">
+          [Catholic University of Ghana, Fiapre]<br>
+          <small>Replace with campus photo</small>
+        </div>
+        <div class="branch-info">
+          <div class="branch-name">Catholic University of Ghana, Fiapre</div>
+          <div class="branch-desc">
+            A growing BNUTS family fostering faith, culture, and academic success among Birifor students in Sunyani.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Future Map Section (Optional) -->
+    <div class="intro" style="margin-top: 30px;">
+      <p>
+        <em>Interactive campus map coming soon!</em><br>
+        Want BNUTS at your institution? <a href="contact.html" style="color: #001F3F; font-weight: bold; text-decoration: underline;">Contact us</a> to start a branch.
+      </p>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 BNUTS. All rights reserved.
+  </footer>
+<!-- BNUTS Cookie Notice -->
+<div id="cookie-notice" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#001F3F; color:white; padding:15px; text-align:center; font-size:0.95rem; z-index:9999;">
+  <p style="margin:0;">
+    We use cookies to improve your experience and analyze site traffic. By continuing to use this site, you agree to our 
+    <a href="privacy.html" style="color:#FFD700; text-decoration:underline;">Privacy Policy</a>.
+  </p>
+  <button id="cookie-accept" style="margin-top:10px; background:#FFD700; color:#001F3F; border:none; padding:6px 16px; border-radius:4px; font-weight:bold; cursor:pointer;">
+    Accept
+  </button>
+</div>
+
+<script>
+  // Check if user already accepted cookies
+  if (!localStorage.getItem('bnuts_cookies_accepted')) {
+    document.getElementById('cookie-notice').style.display = 'block';
+  }
+
+  // Accept button handler
+  document.getElementById('cookie-accept').addEventListener('click', function() {
+    localStorage.setItem('bnuts_cookies_accepted', 'true');
+    document.getElementById('cookie-notice').style.display = 'none';
+  });
+</script>
+</body>
+</html>

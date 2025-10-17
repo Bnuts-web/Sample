@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stories & Updates - BNUTS</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #FFD700; /* BNUTS Gold */
+      color: #001F3F; /* BNUTS Navy */
+      line-height: 1.6;
+    }
+    header {
+      background: #001F3F;
+      color: white;
+      padding: 1.2rem;
+      text-align: center;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    nav {
+      background: #001F3F;
+      padding: 0.8rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    nav a:hover {
+      background: #FFC107; /* Warm Gold */
+      color: #001F3F;
+    }
+
+    .intro {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .intro p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #333;
+    }
+    .section-title {
+      text-align: center;
+      margin: 40px 0 25px;
+      font-size: 1.8rem;
+      color: #001F3F;
+    }
+    .event {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border-left: 4px solid #FFC107;
+    }
+    .event-date {
+      font-weight: bold;
+      color: #001F3F;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+    .event-title {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      color: #001F3F;
+    }
+    .event-desc {
+      color: #444;
+    }
+    .placeholder {
+      font-style: italic;
+      color: #777;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #001F3F;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+     <img src="images/favicon.png" alt="BNUTS Logo" style="max-width: 150px; margin-bottom: 0.5rem;">
+    <div class="logo">BNUTS</div>
+    <div>Birifor National Union of Tertiary Students</div>
+  </header>
+  <nav>
+    <a href="home.html" target="_blank">Home</a>
+    <a href="about.html" target="_blank">About</a>
+    <a href="membership.html" target="_blank">Membership</a>
+    <a href="stories.html" target="_blank">Events</a>
+    <a href="branches.html" target="_blank">Our Campuses</a>
+    <a href="news.html" target="_blank">News & Updates</a>
+    <a href="contact.html" target="_blank">Contact Us</a>
+  </nav>
+
+  <div class="container">
+    
+    <!-- Intro -->
+    <div class="intro">
+      <p>
+        This section captures the vibrant journey of BNUTS, highlighting student experiences, impactful initiatives, and milestone moments that define our collective story. From academic achievements to community outreach, each update reflects the spirit of unity, growth, and resilience among Birifor students in tertiary institutions. Stay informed, stay inspired.
+      </p>
+    </div>
+
+    <!-- Past Events -->
+    <h2 class="section-title">Past Events</h2>
+
+    <div class="event">
+      <div class="event-date">January 10, 2023</div>
+      <div class="event-title">BNUTS Founding Assembly</div>
+      <div class="event-desc placeholder">
+        The inaugural gathering of Birifor students from across Ghana to formally establish the Birifor National Union of Tertiary Students (BNUTS). Discussions centered on vision, structure, and the path forward for collective representation.
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">December 8, 2022</div>
+      <div class="event-title">Pre-Formation Consultative Meeting</div>
+      <div class="event-desc placeholder">
+        A strategic meeting held to gather input from Birifor student leaders on the need for a unified national body. This session laid the groundwork for BNUTS’ official launch in early 2023.
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">November 16, 2022</div>
+      <div class="event-title">Birifor Student Forum on Cultural Identity</div>
+      <div class="event-desc placeholder">
+        A campus-led dialogue at UDS exploring the role of language and heritage in academic spaces. This event sparked the idea of a national union to amplify Birifor voices in higher education.
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="intro" style="margin-top: 30px;">
+      <p>
+        Have a story to share? Participated in a BNUTS event?  
+        <a href="contact.html" style="color: #001F3F; font-weight: bold; text-decoration: underline;">Submit your update</a> and inspire others!
+      </p>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 BNUTS. All rights reserved.
+  </footer>
+
+  <!-- BNUTS Cookie Notice -->
+<div id="cookie-notice" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#001F3F; color:white; padding:15px; text-align:center; font-size:0.95rem; z-index:9999;">
+  <p style="margin:0;">
+    We use cookies to improve your experience and analyze site traffic. By continuing to use this site, you agree to our 
+    <a href="privacy.html" style="color:#FFD700; text-decoration:underline;">Privacy Policy</a>.
+  </p>
+  <button id="cookie-accept" style="margin-top:10px; background:#FFD700; color:#001F3F; border:none; padding:6px 16px; border-radius:4px; font-weight:bold; cursor:pointer;">
+    Accept
+  </button>
+</div>
+
+<script>
+  // Check if user already accepted cookies
+  if (!localStorage.getItem('bnuts_cookies_accepted')) {
+    document.getElementById('cookie-notice').style.display = 'block';
+  }
+
+  // Accept button handler
+  document.getElementById('cookie-accept').addEventListener('click', function() {
+    localStorage.setItem('bnuts_cookies_accepted', 'true');
+    document.getElementById('cookie-notice').style.display = 'none';
+  });
+</script>
+
+</body>
+</html>

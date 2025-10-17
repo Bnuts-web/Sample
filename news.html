@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>News & Updates - BNUTS</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #FFD700; /* BNUTS Gold */
+      color: #001F3F; /* BNUTS Navy */
+      line-height: 1.6;
+    }
+    header {
+      background: #001F3F;
+      color: white;
+      padding: 1.2rem;
+      text-align: center;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .intro {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .intro p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #333;
+    }
+    .news-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+    @media (min-width: 768px) {
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .news-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .news-header {
+      padding: 20px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .news-date {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 8px;
+    }
+    .news-title {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #001F3F;
+      margin-bottom: 10px;
+    }
+    .news-content {
+      padding: 20px;
+      color: #333;
+    }
+
+    nav {
+      background: #001F3F;
+      padding: 0.8rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    nav a:hover {
+      background: #FFC107; /* Warm Gold */
+      color: #001F3F;
+    }
+
+
+    .news-content p {
+      margin-bottom: 15px;
+    }
+    .read-more {
+      display: inline-block;
+      color: #001F3F;
+      font-weight: bold;
+      text-decoration: underline;
+      margin-top: 10px;
+    }
+    .read-more:hover {
+      color: #FFC107;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #001F3F;
+      color: white;
+      margin-top: 40px;
+    }
+    a {
+      color: #001F3F;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+     <img src="images/favicon.png" alt="BNUTS Logo" style="max-width: 150px; margin-bottom: 0.5rem;">
+    <div class="logo">BNUTS</div>
+    <div>Birifor National Union of Tertiary Students</div>
+  </header>
+
+  <nav>
+    <a href="home.html" target="_blank">Home</a>
+    <a href="about.html" target="_blank">About</a>
+    <a href="membership.html" target="_blank">Membership</a>
+    <a href="stories.html" target="_blank">Events</a>
+    <a href="branches.html" target="_blank">Our Campuses</a>
+    <a href="news.html" target="_blank">News & Updates</a>
+    <a href="contact.html" target="_blank">Contact Us</a>
+  </nav>
+
+  <div class="container">
+    
+    <!-- Intro -->
+    <div class="intro">
+      <p>
+        Stay updated with the latest from BNUTS — from academic achievements and cultural events to leadership milestones and community impact. This is where the Birifor student voice thrives.
+      </p>
+    </div>
+
+    <!-- News Articles -->
+    <div class="news-grid">
+
+      <!-- News 1 -->
+      <div class="news-card">
+        <div class="news-header">
+          <div class="news-date">April 10, 2025</div>
+          <h2 class="news-title">BNUTS Launches Academic Mentorship Program</h2>
+        </div>
+        <div class="news-content">
+          <p>
+            In a bid to support first-year Birifor students, BNUTS has launched a nationwide academic mentorship program pairing senior students with juniors across 8 institutions. The initiative aims to improve retention, build confidence, and foster peer learning.
+          </p>
+          <p>
+            “Education is our collective responsibility,” said Amos Kuudeerma Kador, BNUTS President. “This program ensures no Birifor student walks alone.”
+          </p>
+          <a href="#" class="read-more">Read full announcement</a>
+        </div>
+      </div>
+
+      <!-- News 2 -->
+      <div class="news-card">
+        <div class="news-header">
+          <div class="news-date">March 22, 2025</div>
+          <h2 class="news-title">Birifor Language Workshop Draws 120+ Students</h2>
+        </div>
+        <div class="news-content">
+          <p>
+            The inaugural BNUTS Birifor Language & Culture Workshop held at UDS-Nyankpala brought together over 120 students from 5 campuses. Participants learned basic phrases, traditional songs, and the importance of linguistic preservation in academic spaces.
+          </p>
+          <p>
+            Plans are underway to host the event quarterly at rotating campuses.
+          </p>
+          <a href="#" class="read-more">View photo gallery</a>
+        </div>
+      </div>
+
+      <!-- News 3 -->
+      <div class="news-card">
+        <div class="news-header">
+          <div class="news-date">February 15, 2025</div>
+          <h2 class="news-title">BNUTS Signs Partnership with Ghana Tertiary Education Commission</h2>
+        </div>
+        <div class="news-content">
+          <p>
+            BNUTS has signed a landmark Memorandum of Understanding (MoU) with the Ghana Tertiary Education Commission (GTEC) to advocate for inclusive language policies and support for minority ethnic student groups in higher education.
+          </p>
+          <p>
+            This partnership marks a major step in institutional recognition of Birifor student needs.
+          </p>
+          <a href="#" class="read-more">Download MoU summary</a>
+        </div>
+      </div>
+
+      <!-- News 4 -->
+      <div class="news-card">
+        <div class="news-header">
+          <div class="news-date">January 30, 2025</div>
+          <h2 class="news-title">Member Spotlight: Victoria Boitey Wins National Leadership Award</h2>
+        </div>
+        <div class="news-content">
+          <p>
+            BNUTS Women’s Commissioner, Victoria Norma Boitey (KNUST), has been awarded the 2025 National Student Leadership Excellence Prize for her work in promoting gender equity and cultural identity on campus.
+          </p>
+          <p>
+            “This is a win for every Birifor girl with a dream,” Victoria said.
+          </p>
+          <a href="#" class="read-more">Read full interview</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Call to Action -->
+    <div class="intro" style="margin-top: 30px;">
+      <p>
+        Have news to share? Achievements, event reports, or ideas?  
+        <a href="contact.html" style="color: #001F3F; font-weight: bold; text-decoration: underline;">Submit your story</a>!
+      </p>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 BNUTS. All rights reserved.
+  </footer>
+
+  <!-- BNUTS Cookie Notice -->
+<div id="cookie-notice" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#001F3F; color:white; padding:15px; text-align:center; font-size:0.95rem; z-index:9999;">
+  <p style="margin:0;">
+    We use cookies to improve your experience and analyze site traffic. By continuing to use this site, you agree to our 
+    <a href="privacy.html" style="color:#FFD700; text-decoration:underline;">Privacy Policy</a>.
+  </p>
+  <button id="cookie-accept" style="margin-top:10px; background:#FFD700; color:#001F3F; border:none; padding:6px 16px; border-radius:4px; font-weight:bold; cursor:pointer;">
+    Accept
+  </button>
+</div>
+
+<script>
+  // Check if user already accepted cookies
+  if (!localStorage.getItem('bnuts_cookies_accepted')) {
+    document.getElementById('cookie-notice').style.display = 'block';
+  }
+
+  // Accept button handler
+  document.getElementById('cookie-accept').addEventListener('click', function() {
+    localStorage.setItem('bnuts_cookies_accepted', 'true');
+    document.getElementById('cookie-notice').style.display = 'none';
+  });
+</script>
+
+</body>
+</html>

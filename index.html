@@ -3,31 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BNUTS - Birifor National Union of Tertiary Students</title>
+  <title>bnuts.com</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
     body {
       background-color: #FFD700; /* Bright Yellow */
       color: #001F3F; /* Navy Blue */
       line-height: 1.6;
+      text-align: center;
     }
     header {
       background: #001F3F; /* Navy Blue */
       color: white;
-      padding: 1.5rem;
+      padding: 1.2rem 1.5rem;
       text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: relative;
     }
     .logo {
-      font-size: 2.2rem;
+      font-size: 2rem;
       font-weight: bold;
       letter-spacing: 1px;
-      margin-bottom: 0.5rem;
+      
     }
     .tagline {
       font-style: italic;
+      font-weight: bold;
       opacity: 0.9;
-      font-size: 1.1rem;
+      font-size: 1.5rem;
+      margin-top: 0.3rem;
+    }
+    /* Mobile hamburger */
+    .mobile-menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 8px;
+      position: absolute;
+      top: 18px;
+      right: 15px;
+      z-index: 200;
+    }
+    .mobile-menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 3px 0;
+      border-radius: 2px;
     }
     nav {
       background: #001F3F;
@@ -95,6 +117,62 @@
     .social-links a:hover {
       color: #FFC107;
     }
+    .social-links a:hover img {
+      transform: scale(1.1);
+      transition: transform 0.2s ease;
+    }
+    .social-links a img {
+      margin-top: 8px;
+    }
+     /* Mobile Styles */
+    @media (max-width: 768px) {
+      .mobile-menu-toggle {
+        display: flex;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 31, 63, 0.97);
+        backdrop-filter: blur(5px);
+        padding: 0;
+        transform: translateY(-100%);
+        transition: transform 0.4s ease;
+        z-index: 150;
+      }
+      nav.active {
+        transform: translateY(0);
+      }
+      nav a {
+        display: block;
+        margin: 1.2rem 0;
+        font-size: 1.4rem;
+        width: 100%;
+        text-align: center;
+      }
+     
+    }
+
+     section#about, section#membership, section#events {
+        text-align: center;
+  
+      }
+      a:hover{
+        background: #001F3F;
+        color: white;
+        font-size: 1.1rem;
+      }
+      #about a:hover, #membership a:hover, #events a:hover {
+        color: #FFC107;
+        text-decoration: underline;
+        background: black;
+        transition: color 0.2s;
+      }
     footer {
       text-align: center;
       padding: 1.5rem;
@@ -109,24 +187,32 @@
       text-decoration: underline;
       margin: 0 0.5rem;
     }
+    
   </style>
 </head>
 <body>
 
   <header>
     <img src="images/favicon.png" alt="BNUTS Logo" style="max-width: 150px; margin-bottom: 0.5rem;">
-    <div class="logo">BNUTS</div>
+    
     <div class="tagline">Birifor National Union of Tertiary Students</div>
+    <div class="logo">(BNUTS)</div>
+    <div class="mobile-menu-toggle" id="mobileMenuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
 
-  <nav>
-    <a href="home.html" target="_blank">Home</a>
+  <nav id="mainNav">
+    
     <a href="about.html" target="_blank">About</a>
     <a href="membership.html" target="_blank">Membership</a>
     <a href="stories.html" target="_blank">Events</a>
     <a href="branches.html" target="_blank">Our Campuses</a>
     <a href="news.html" target="_blank">News & Updates</a>
     <a href="contact.html" target="_blank">Contact Us</a>
+    <a href="constitution.html" target="_blank">Our Constitution</a>
   </nav>
 
   <section class="hero">
@@ -136,6 +222,25 @@
     <a href="stories.html" class="btn">See Events</a>
   </section>
 
+  <section id="about">
+  <h2>About BNUTS</h2>
+  <p>The Birifor National Union of Tertiary Students (BNUTS) was established in February 2023</p>
+  <a href="about.html" class="" >Read More</a>
+ </section>
+
+ <section id="membership">
+  <h2>Join BNUTS</h2>
+  <p>Become part of our growing community</p>
+  <a href="membership.html" class="">Become a Member 👨‍👩‍👧‍👦</a>
+ </section>
+
+ <section id="events">
+  <h2>Upcoming Events</h2>
+  <p>Stay tuned for cultural days, workshops, and more!</p>
+  <a href="stories.html" class="">See Events</a>
+ </section>
+
+
   <footer>
     &copy; 2025 BNUTS. All rights reserved.<br>
     <div class="footer-links">
@@ -143,19 +248,29 @@
       <a href="constitution.html">Constitution</a> • 
       <a href="contact.html">Contact Us</a>
       <div class="social-links">
-          <a href="https://facebook.com/bnutsgh" target="_blank">Facebook</a>
-          <a href="https://instagram.com/bnutsgh" target="_blank">Instagram</a>
-          <a href="https://x.com/bnutsgh" target="_blank">X (Twitter)</a>
-          <a href="https://tiktok.com/@bnutsgh" target="_blank">TikTok</a>
-          <a href="https://chat.whatsapp.com/..." target="_blank">WhatsApp Group</a>
-        </div>
+        <a href="https://www.facebook.com/share/17ECtsFhyK/" target="_blank" aria-label="Facebook">
+           <img src="images/facebook.png" alt="Facebook" width="28" height="28" style="border-radius: 50%; vertical-align: middle;">
+        </a>
+        <a href="https://instagram.com/bnutsgh" target="_blank" aria-label="Instagram">
+           <img src="images/insta.jpeg" alt="Instagram" width="28" height="28" style="border-radius: 50%; vertical-align: middle;">
+        </a>
+        <a href="https://x.com/bnutsgh" target="_blank" aria-label="X (Twitter)">
+           <img src="images/x.jpeg" alt="Twitter" width="28" height="28" style="border-radius: 50%; vertical-align: middle;">
+        </a>
+        <a href="https://tiktok.com/@bnutsgh" target="_blank" aria-label="TikTok" style="display: inline-block; margin-right: 12px;">
+          <img src="images/download (1).png" alt="TikTok" width="28" height="28" style="border-radius: 50%; vertical-align: middle;">
+        </a>
+        <a href="https://chat.whatsapp.com/EBPOauKwTtt9PZV4ONyWjr?mode=ems_wa_t" target="_blank" aria-label="WhatsApp Group" style="display: inline-block; margin-right: 12px;">
+          <img src="images/download.png" alt="WhatsApp" width="28" height="28" style="border-radius: 50%; vertical-align: middle;">
+        </a>
+      </div>
     </div>
 
     
   </footer>
 
   <!-- BNUTS Cookie Notice -->
-<div id="cookie-notice" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#001F3F; color:white; padding:15px; text-align:center; font-size:0.95rem; z-index:9999;">
+ <div id="cookie-notice" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#001F3F; color:white; padding:15px; text-align:center; font-size:0.95rem; z-index:9999;">
   <p style="margin:0;">
     We use cookies to improve your experience and analyze site traffic. By continuing to use this site, you agree to our 
     <a href="privacy.html" style="color:#FFD700; text-decoration:underline;">Privacy Policy</a>.
@@ -163,20 +278,9 @@
   <button id="cookie-accept" style="margin-top:10px; background:#FFD700; color:#001F3F; border:none; padding:6px 16px; border-radius:4px; font-weight:bold; cursor:pointer;">
     Accept
   </button>
-</div>
+ </div>
 
-<script>
-  // Check if user already accepted cookies
-  if (!localStorage.getItem('bnuts_cookies_accepted')) {
-    document.getElementById('cookie-notice').style.display = 'block';
-  }
-
-  // Accept button handler
-  document.getElementById('cookie-accept').addEventListener('click', function() {
-    localStorage.setItem('bnuts_cookies_accepted', 'true');
-    document.getElementById('cookie-notice').style.display = 'none';
-  });
-</script>
+  <script src="js/site.js"></script>
 
 </body>
 </html>

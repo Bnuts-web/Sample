@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy - BNUTS</title>
+  <title>bnuts.com/Privacy Policy</title>
+   <link rel="icon" type="image/png" href="images/favicon.png" />
   <style>
     * {
       margin: 0;
@@ -19,12 +20,40 @@
     header {
       background: #001F3F;
       color: white;
-      padding: 1.2rem;
+      padding: 1.2rem 1.5rem;
       text-align: center;
+      position: relative;
     }
     .logo {
       font-size: 2rem;
       font-weight: bold;
+      letter-spacing: 1px;
+      
+    }
+    .tagline {
+      font-style: italic;
+      font-weight: bold;
+      opacity: 0.9;
+      font-size: 1.5rem;
+      margin-top: 0.3rem;
+    }
+    /* Mobile Hamburger */
+    .mobile-menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 8px;
+      position: absolute;
+      top: 18px;
+      right: 15px;
+      z-index: 200;
+    }
+    .mobile-menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 3px 0;
+      border-radius: 2px;
     }
     .container {
       max-width: 800px;
@@ -51,30 +80,6 @@
       margin-bottom: 15px;
       color: #333;
     }
-
-    nav {
-      background: #001F3F;
-      padding: 0.8rem;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: 500;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      transition: background 0.3s ease;
-    }
-    nav a:hover {
-      background: #FFC107; /* Warm Gold */
-      color: #001F3F;
-    }
-
-
     ul {
       padding-left: 20px;
     }
@@ -89,10 +94,66 @@
     }
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 1.5rem;
       background: #001F3F;
       color: white;
-      margin-top: 40px;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+    
+    .footer-links a {
+      color: #FFC107;
+      text-decoration: underline;
+      margin: 0 0.5rem;
+    }
+    .social-links a {
+      display: inline-block;
+      margin-right: 12px;
+      color: #001F3F;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .social-links a:hover {
+      color: #FFC107;
+    }
+     .social-links a:hover img {
+      transform: scale(1.1);
+      transition: transform 0.2s ease;
+    }
+    .social-links a img {
+      margin-top: 8px;
+    }
+     /* Mobile Styles */
+    @media (max-width: 768px) {
+      .mobile-menu-toggle {
+        display: flex;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 31, 63, 0.97);
+        backdrop-filter: blur(5px);
+        padding: 0;
+        transform: translateY(-100%);
+        transition: transform 0.4s ease;
+        z-index: 150;
+      }
+      nav.active {
+        transform: translateY(0);
+      }
+      nav a {
+        display: block;
+        margin: 1.2rem 0;
+        font-size: 1.4rem;
+        width: 100%;
+        text-align: center;
+      }
     }
     a {
       color: #001F3F;
@@ -106,20 +167,16 @@
 <body>
 
   <header>
-     <img src="images/favicon.png" alt="BNUTS Logo" style="max-width: 150px; margin-bottom: 0.5rem;">
-    <div class="logo">BNUTS</div>
-    <div>Birifor National Union of Tertiary Students</div>
+    <img src="images/favicon.png" alt="BNUTS Logo" style="max-width: 150px; margin-bottom: 0.5rem;">
+    
+    <div class="tagline">Birifor National Union of Tertiary Students</div>
+    <div class="logo">(BNUTS)</div>
+    <div class="mobile-menu-toggle" id="mobileMenuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
-
-  <nav>
-    <a href="home.html" target="_blank">Home</a>
-    <a href="about.html" target="_blank">About</a>
-    <a href="membership.html" target="_blank">Membership</a>
-    <a href="stories.html" target="_blank">Events</a>
-    <a href="branches.html" target="_blank">Our Campuses</a>
-    <a href="news.html" target="_blank">News & Updates</a>
-    <a href="contact.html" target="_blank">Contact Us</a>
-  </nav>
 
   <div class="container">
     <div class="card">
@@ -157,4 +214,70 @@
         BNUTS **does not sell, rent, or trade** your personal information. We will not share your data with third parties unless:
       </p>
       <ul>
-        <li>You
+        <li>You give explicit consent, or</li>
+        <li>Required by law (e.g., in response to a valid legal request)</li>
+      </ul>
+
+      <h2>4. Data Security</h2>
+      <p>
+        We implement reasonable technical and organizational measures to protect your information, including:
+      </p>
+      <ul>
+        <li>Using secure form services (e.g., Formspree with encryption)</li>
+        <li>Limiting access to authorized BNUTS executives only</li>
+        <li>Storing digital records in password-protected systems</li>
+      </ul>
+
+      <h2>5. Your Rights</h2>
+      <p>Under Ghana’s Data Protection Act, you have the right to:</p>
+      <ul>
+        <li>Access your personal data held by BNUTS</li>
+        <li>Request correction of inaccurate information</li>
+        <li>Withdraw consent for data processing (note: this may affect your membership)</li>
+        <li>Lodge a complaint with the <a href="https://www.dpa.gov.gh" target="_blank">Data Protection Commission of Ghana</a></li>
+      </ul>
+
+      <h2>6. Contact Us</h2>
+      <p>
+        If you have questions about this policy or wish to exercise your data rights, please contact us:
+      </p>
+      <p>
+        <strong>Email:</strong> <a href="mailto:info@bnuts.org">info@bnuts.org</a><br>
+        <strong>Address:</strong> BNUTS Secretariat, [Your Institution or P.O. Box], Ghana
+      </p>
+
+      <p>
+        Thank you for trusting BNUTS with your information. We are honored to serve and represent Birifor students across Ghana.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+     &copy; 2025 BNUTS. All rights reserved.<br>
+    <div class="footer-links">
+       
+      <a href="constitution.html">Constitution</a> • 
+      <a href="contact.html">Contact Us</a>
+      <div class="social-links">
+          <a href="https://www.facebook.com/share/17ECtsFhyK/" target="_blank" aria-label="Facebook">
+           <img src="images/facebook.png" alt="Facebook" width="28" height="28" style="border-radius: 50%; vertical-align: middle;">
+        </a>
+        <a href="https://instagram.com/bnutsgh" target="_blank" aria-label="Instagram">
+           <img src="images/insta.jpeg" alt="Instagram" width="28" height="28" style="border-radius: 50%; vertical-align: middle;">
+        </a>
+        <a href="https://x.com/bnutsgh" target="_blank" aria-label="X (Twitter)">
+           <img src="images/x.jpeg" alt="Twitter" width="28" height="28" style="border-radius: 50%; vertical-align: middle;">
+        </a>
+        <a href="https://tiktok.com/@bnutsgh" target="_blank" aria-label="TikTok" style="display: inline-block; margin-right: 12px;">
+          <img src="images/download (1).png" alt="TikTok" width="28" height="28" style="border-radius: 50%; vertical-align: middle;">
+        </a>
+        <a href="https://chat.whatsapp.com/EBPOauKwTtt9PZV4ONyWjr?mode=ems_wa_t " target="_blank" aria-label="WhatsApp Group" style="display: inline-block; margin-right: 12px;">
+          <img src="images/download.png" alt="WhatsApp" width="28" height="28" style="border-radius: 50%; vertical-align: middle;">
+        </a>
+        </div>
+    </div>
+  </footer>
+  <script src="js/site.js"></script>
+
+</body>
+</html>

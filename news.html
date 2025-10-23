@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>News & Updates - BNUTS</title>
+  <title>bnuts.com/News</title>
+   <link rel="icon" type="image/png" href="images/favicon.png" />
   <style>
     * {
       margin: 0;
@@ -19,12 +20,40 @@
     header {
       background: #001F3F;
       color: white;
-      padding: 1.2rem;
+      padding: 1.2rem 1.5rem;
       text-align: center;
+      position: relative;
     }
     .logo {
       font-size: 2rem;
       font-weight: bold;
+      letter-spacing: 1px;
+      
+    }
+    .tagline {
+      font-style: italic;
+      font-weight: bold;
+      opacity: 0.9;
+      font-size: 1.5rem;
+      margin-top: 0.3rem;
+    }
+    /* Mobile Hamburger */
+    .mobile-menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 8px;
+      position: absolute;
+      top: 18px;
+      right: 15px;
+      z-index: 200;
+    }
+    .mobile-menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 3px 0;
+      border-radius: 2px;
     }
     .container {
       max-width: 900px;
@@ -117,12 +146,36 @@
     .read-more:hover {
       color: #FFC107;
     }
-    footer {
+     footer {
       text-align: center;
-      padding: 20px;
+      padding: 1.5rem;
       background: #001F3F;
       color: white;
-      margin-top: 40px;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+    
+    .footer-links a {
+      color: #FFC107;
+      text-decoration: underline;
+      margin: 0 0.5rem;
+    }
+    .social-links a {
+      display: inline-block;
+      margin-right: 12px;
+      color: #001F3F;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .social-links a:hover {
+      color: #FFC107;
+    }
+     .social-links a:hover img {
+      transform: scale(1.1);
+      transition: transform 0.2s ease;
+    }
+    .social-links a img {
+      margin-top: 8px;
     }
     a {
       color: #001F3F;
@@ -134,18 +187,25 @@
 
   <header>
      <img src="images/favicon.png" alt="BNUTS Logo" style="max-width: 150px; margin-bottom: 0.5rem;">
-    <div class="logo">BNUTS</div>
-    <div>Birifor National Union of Tertiary Students</div>
+    
+    <div class="tagline">Birifor National Union of Tertiary Students</div>
+    <div class="logo">(BNUTS)</div>
+    <div class="mobile-menu-toggle" id="mobileMenuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
 
-  <nav>
+  <nav id="mainNav">
     <a href="home.html" target="_blank">Home</a>
     <a href="about.html" target="_blank">About</a>
     <a href="membership.html" target="_blank">Membership</a>
     <a href="stories.html" target="_blank">Events</a>
     <a href="branches.html" target="_blank">Our Campuses</a>
-    <a href="news.html" target="_blank">News & Updates</a>
+    
     <a href="contact.html" target="_blank">Contact Us</a>
+    <a href="constitution.html" target="_blank">Our Constitution</a>
   </nav>
 
   <div class="container">
@@ -241,7 +301,29 @@
   </div>
 
   <footer>
-    &copy; 2025 BNUTS. All rights reserved.
+    &copy; 2025 BNUTS. All rights reserved.<br>
+    <div class="footer-links">
+      <a href="privacy.html" >Privacy Policy</a> • 
+      <a href="constitution.html">Constitution</a> • 
+      <a href="contact.html">Contact Us</a>
+      <div class="social-links">
+          <a href="https://www.facebook.com/share/17ECtsFhyK/" target="_blank" aria-label="Facebook">
+           <img src="images/facebook.png" alt="Facebook" width="28" height="28" style="border-radius: 50%; vertical-align: middle;">
+        </a>
+        <a href="https://instagram.com/bnutsgh" target="_blank" aria-label="Instagram">
+           <img src="images/insta.jpeg" alt="Instagram" width="28" height="28" style="border-radius: 50%; vertical-align: middle;">
+        </a>
+        <a href="https://x.com/bnutsgh" target="_blank" aria-label="X (Twitter)">
+           <img src="images/x.jpeg" alt="Twitter" width="28" height="28" style="border-radius: 50%; vertical-align: middle;">
+        </a>
+        <a href="https://tiktok.com/@bnutsgh" target="_blank" aria-label="TikTok" style="display: inline-block; margin-right: 12px;">
+          <img src="images/download (1).png" alt="TikTok" width="28" height="28" style="border-radius: 50%; vertical-align: middle;">
+        </a>
+        <a href="https://chat.whatsapp.com/EBPOauKwTtt9PZV4ONyWjr?mode=ems_wa_t " target="_blank" aria-label="WhatsApp Group" style="display: inline-block; margin-right: 12px;">
+          <img src="images/download.png" alt="WhatsApp" width="28" height="28" style="border-radius: 50%; vertical-align: middle;">
+        </a>
+        </div>
+    </div>
   </footer>
 
   <!-- BNUTS Cookie Notice -->
@@ -267,6 +349,6 @@
     document.getElementById('cookie-notice').style.display = 'none';
   });
 </script>
-
+  <script src="js/site.js"></script>
 </body>
 </html>

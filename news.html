@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>bnuts.com/News</title>
-   <link rel="icon" type="image/png" href="images/favicon.png" />
+  <title>BNUTS - News & Updates</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
   <style>
     * {
       margin: 0;
@@ -28,7 +28,6 @@
       font-size: 2rem;
       font-weight: bold;
       letter-spacing: 1px;
-      
     }
     .tagline {
       font-style: italic;
@@ -79,11 +78,6 @@
       grid-template-columns: 1fr;
       gap: 25px;
     }
-    @media (min-width: 768px) {
-      .news-grid {
-        grid-template-columns: 1fr;
-      }
-    }
     .news-card {
       background: white;
       border-radius: 12px;
@@ -109,7 +103,19 @@
       padding: 20px;
       color: #333;
     }
-
+    .news-content p {
+      margin-bottom: 15px;
+    }
+    .read-more {
+      display: inline-block;
+      color: #001F3F;
+      font-weight: bold;
+      text-decoration: underline;
+      margin-top: 10px;
+    }
+    .read-more:hover {
+      color: #FFC107;
+    }
     nav {
       background: #001F3F;
       padding: 0.8rem;
@@ -128,25 +134,10 @@
       transition: background 0.3s ease;
     }
     nav a:hover {
-      background: #FFC107; /* Warm Gold */
+      background: #FFC107;
       color: #001F3F;
     }
-
-
-    .news-content p {
-      margin-bottom: 15px;
-    }
-    .read-more {
-      display: inline-block;
-      color: #001F3F;
-      font-weight: bold;
-      text-decoration: underline;
-      margin-top: 10px;
-    }
-    .read-more:hover {
-      color: #FFC107;
-    }
-     footer {
+    footer {
       text-align: center;
       padding: 1.5rem;
       background: #001F3F;
@@ -154,7 +145,6 @@
       margin-top: 3rem;
       font-size: 0.9rem;
     }
-    
     .footer-links a {
       color: #FFC107;
       text-decoration: underline;
@@ -170,43 +160,77 @@
     .social-links a:hover {
       color: #FFC107;
     }
-     .social-links a:hover img {
-      transform: scale(1.1);
-      transition: transform 0.2s ease;
-    }
     .social-links a img {
       margin-top: 8px;
+      border-radius: 50%;
+      vertical-align: middle;
     }
     a {
       color: #001F3F;
       text-decoration: underline;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .mobile-menu-toggle {
+        display: flex;
+      }
+      nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 31, 63, 0.97);
+        backdrop-filter: blur(5px);
+        padding: 0;
+        transform: translateY(-100%);
+        transition: transform 0.4s ease;
+        z-index: 150;
+      }
+      nav.active {
+        display: flex;
+        transform: translateY(0);
+      }
+      nav a {
+        display: block;
+        margin: 1.2rem 0;
+        font-size: 1.4rem;
+        width: 80%;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-     <img src="images/favicon.png" alt="BNUTS Logo" style="max-width: 150px; margin-bottom: 0.5rem;">
-    
+    <img src="images/favicon.png" alt="BNUTS Logo" style="max-width: 150px; margin-bottom: 0.5rem;">
     <div class="tagline">Birifor National Union of Tertiary Students</div>
     <div class="logo">(BNUTS)</div>
-    <div class="mobile-menu-toggle" id="mobileMenuToggle">
+    <button 
+      class="mobile-menu-toggle" 
+      id="mobileMenuToggle"
+      aria-label="Toggle navigation menu"
+    >
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </button>
   </header>
 
   <nav id="mainNav">
-    <a href="home.html" target="_blank">Home</a>
-    <a href="about.html" target="_blank">About</a>
-    <a href="membership.html" target="_blank">Membership</a>
-    
-    <a href="branches.html" target="_blank">Our Campuses</a>
-    
-    <a href="contact.html" target="_blank">Contact Us</a>
-     <a href="stories.html" target="_blank">Events</a>
-    <a href="constitution.html" target="_blank">Our Constitution</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="membership.html">Membership</a>
+    <a href="branches.html">Our Campuses</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="stories.html">Events</a>
+    <a href="constitution.html">Our Constitution</a>
   </nav>
 
   <div class="container">
@@ -234,7 +258,7 @@
           <p>
             “Education is our collective responsibility,” said Amos Kuudeerma Kador, BNUTS President. “This program ensures no Birifor student walks alone.”
           </p>
-          <a href="#" class="read-more">Read full announcement</a>
+          <span class="read-more">Full story coming soon</span>
         </div>
       </div>
 
@@ -251,7 +275,7 @@
           <p>
             Plans are underway to host the event quarterly at rotating campuses.
           </p>
-          <a href="#" class="read-more">View photo gallery</a>
+          <span class="read-more">Photo gallery coming soon</span>
         </div>
       </div>
 
@@ -259,7 +283,7 @@
       <div class="news-card">
         <div class="news-header">
           <div class="news-date">February 15, 2025</div>
-          <h2 class="news-title">BNUTS Signs Partnership with Ghana Tertiary Education Commission</h2>
+          <h2 class="news-title">BNUTS Signs MoU with Ghana Tertiary Education Commission</h2>
         </div>
         <div class="news-content">
           <p>
@@ -268,7 +292,7 @@
           <p>
             This partnership marks a major step in institutional recognition of Birifor student needs.
           </p>
-          <a href="#" class="read-more">Download MoU summary</a>
+          <span class="read-more">MoU summary available on request coming soon</span>
         </div>
       </div>
 
@@ -285,7 +309,7 @@
           <p>
             “This is a win for every Birifor girl with a dream,” Victoria said.
           </p>
-          <a href="#" class="read-more">Read full interview</a>
+          <span class="read-more">Interview coming soon</span>
         </div>
       </div>
 
@@ -304,52 +328,64 @@
   <footer>
     &copy; 2025 BNUTS. All rights reserved.<br>
     <div class="footer-links">
-      <a href="privacy.html" >Privacy Policy</a> • 
+      <a href="privacy.html">Privacy Policy</a> • 
       <a href="constitution.html">Constitution</a> • 
       <a href="contact.html">Contact Us</a>
-      <div class="social-links">
-          <a href="https://www.facebook.com/share/17ECtsFhyK/" target="_blank" aria-label="Facebook">
-           <img src="images/facebook.png" alt="Facebook" width="28" height="28" style="border-radius: 50%; vertical-align: middle;">
-        </a>
-        <a href="https://instagram.com/bnutsgh" target="_blank" aria-label="Instagram">
-           <img src="images/insta.jpeg" alt="Instagram" width="28" height="28" style="border-radius: 50%; vertical-align: middle;">
-        </a>
-        <a href="https://x.com/bnutsgh" target="_blank" aria-label="X (Twitter)">
-           <img src="images/x.jpeg" alt="Twitter" width="28" height="28" style="border-radius: 50%; vertical-align: middle;">
-        </a>
-        <a href="https://tiktok.com/@bnutsgh" target="_blank" aria-label="TikTok" style="display: inline-block; margin-right: 12px;">
-          <img src="images/download (1).png" alt="TikTok" width="28" height="28" style="border-radius: 50%; vertical-align: middle;">
-        </a>
-        <a href="https://chat.whatsapp.com/EBPOauKwTtt9PZV4ONyWjr?mode=ems_wa_t " target="_blank" aria-label="WhatsApp Group" style="display: inline-block; margin-right: 12px;">
-          <img src="images/download.png" alt="WhatsApp" width="28" height="28" style="border-radius: 50%; vertical-align: middle;">
-        </a>
-        </div>
+    </div>
+    <div class="social-links">
+      <a href="https://www.facebook.com/share/17ECtsFhyK/" target="_blank" aria-label="Facebook">
+        <img src="images/facebook.png" alt="Facebook" width="28" height="28">
+      </a>
+      <a href="https://instagram.com/bnutsgh" target="_blank" aria-label="Instagram">
+        <img src="images/insta.jpeg" alt="Instagram" width="28" height="28">
+      </a>
+      <a href="https://x.com/bnutsgh" target="_blank" aria-label="X (Twitter)">
+        <img src="images/x.jpeg" alt="Twitter" width="28" height="28">
+      </a>
+      <a href="https://tiktok.com/@bnutsgh" target="_blank" aria-label="TikTok">
+        <img src="images/download (1).png" alt="TikTok" width="28" height="28">
+      </a>
+      <a href="https://chat.whatsapp.com/EBPOauKwTtt9PZV4ONyWjr" target="_blank" aria-label="WhatsApp Group">
+        <img src="images/download.png" alt="WhatsApp" width="28" height="28">
+      </a>
     </div>
   </footer>
 
   <!-- BNUTS Cookie Notice -->
-<div id="cookie-notice" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#001F3F; color:white; padding:15px; text-align:center; font-size:0.95rem; z-index:9999;">
-  <p style="margin:0;">
-    We use cookies to improve your experience and analyze site traffic. By continuing to use this site, you agree to our 
-    <a href="privacy.html" style="color:#FFD700; text-decoration:underline;">Privacy Policy</a>.
-  </p>
-  <button id="cookie-accept" style="margin-top:10px; background:#FFD700; color:#001F3F; border:none; padding:6px 16px; border-radius:4px; font-weight:bold; cursor:pointer;">
-    Accept
-  </button>
-</div>
+  <div id="cookie-notice" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#001F3F; color:white; padding:15px; text-align:center; font-size:0.95rem; z-index:9999;">
+    <p style="margin:0;">
+      We use cookies to improve your experience and analyze site traffic. By continuing to use this site, you agree to our 
+      <a href="privacy.html" style="color:#FFD700; text-decoration:underline;">Privacy Policy</a>.
+    </p>
+    <button id="cookie-accept" style="margin-top:10px; background:#FFD700; color:#001F3F; border:none; padding:6px 16px; border-radius:4px; font-weight:bold; cursor:pointer;">
+      Accept
+    </button>
+  </div>
 
-<script>
-  // Check if user already accepted cookies
-  if (!localStorage.getItem('bnuts_cookies_accepted')) {
-    document.getElementById('cookie-notice').style.display = 'block';
-  }
+  <script>
+    // Cookie Notice
+    if (!localStorage.getItem('bnuts_cookies_accepted')) {
+      document.getElementById('cookie-notice').style.display = 'block';
+    }
+    document.getElementById('cookie-accept').addEventListener('click', function() {
+      localStorage.setItem('bnuts_cookies_accepted', 'true');
+      document.getElementById('cookie-notice').style.display = 'none';
+    });
 
-  // Accept button handler
-  document.getElementById('cookie-accept').addEventListener('click', function() {
-    localStorage.setItem('bnuts_cookies_accepted', 'true');
-    document.getElementById('cookie-notice').style.display = 'none';
-  });
-</script>
-  <script src="js/site.js"></script>
+    // Mobile Menu Toggle
+    const toggle = document.getElementById('mobileMenuToggle');
+    const nav = document.getElementById('mainNav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+      });
+      document.querySelectorAll('#mainNav a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('active');
+        });
+      });
+    }
+  </script>
+
 </body>
 </html>

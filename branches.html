@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>bnuts.com/Branches</title>
+  <title>Branches</title>
    <link rel="icon" type="image/png" href="images/favicon.png" />
   <style>
     * {
@@ -205,6 +205,43 @@
         text-align: center;
       }
     }
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    .floating-whatsapp img {
+      width: 65%;
+      height: 65%;
+      border-radius: 50%;
+      padding: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .floating-whatsapp:hover {
+      transform: scale(1.1) translateY(-3px);
+      box-shadow: 0 6px 16px rgba(37, 211, 102, 0.25);
+    }
+
+    @media (max-width: 768px) {
+      .floating-whatsapp {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -223,7 +260,7 @@
 
   <nav id="mainNav">
     <a href="index.html">Home</a>
-    <a href="about.html">About</a>
+    <a href="about.html">About Us</a>
     <a href="membership.html">Membership</a>
     
     <a href="news.html">News & Updates</a>
@@ -385,5 +422,13 @@
 
   <script src="js/site.js"></script>
   <script src="js/campus-images.js"></script>
+  <!-- Floating WhatsApp Button -->
+ <a href="https://wa.me/233557774818?text=Hi%20BNUTS,%20I'm%20interested%20in%20joining!" 
+   target="_blank"
+   class="floating-whatsapp"
+   aria-label="Chat with BNUTS on WhatsApp"
+   title="Chat with BNUTS">
+   <img src="images/download.png" alt="WhatsApp Chat" aria-hidden="true">
+  </a>
 </body>
 </html>

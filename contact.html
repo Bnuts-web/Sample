@@ -108,15 +108,20 @@
       position: sticky;
       top: 0;
       z-index: 100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
     }
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 1rem;
+      margin: 0.5rem 1rem;
       font-weight: 500;
       padding: 0.5rem 1rem;
       border-radius: 4px;
-      transition: background 0.3s ease;
+      transition: all 0.3s ease;
+      display: inline-block;
     }
     nav a:hover {
       background: #FFC107; /* Warm Gold */
@@ -125,10 +130,39 @@
     
      /* Mobile Styles */
     @media (max-width: 768px) {
+      .container {
+        padding: 0 15px;
+      }
+      
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      .card {
+        padding: 20px;
+      }
+      
+      .info-item {
+        flex-direction: column;
+      }
+      
+      .info-item strong {
+        margin-bottom: 5px;
+      }
+      
+      form input,
+      form textarea {
+        padding: 10px;
+        font-size: 15px;
+      }
+      
       .mobile-menu-toggle {
         display: flex;
       }
+      
       nav {
+        display: none;
         position: fixed;
         top: 0;
         left: 0;
@@ -144,17 +178,28 @@
         transition: transform 0.4s ease;
         z-index: 150;
       }
+      
       nav.active {
+        display: flex;
         transform: translateY(0);
       }
+      
       nav a {
         display: block;
         margin: 1.2rem 0;
         font-size: 1.4rem;
-        width: 100%;
+        width: 80%;
         text-align: center;
       }
-     
+      
+      .social-links {
+        margin-top: 15px;
+      }
+      
+      .social-links a {
+        margin-right: 8px;
+        margin-bottom: 8px;
+      }
     }
      .social-links a:hover img {
       transform: scale(1.1);
@@ -224,6 +269,65 @@
       text-decoration: underline;
       margin: 0 0.5rem;
     }
+
+    /* WhatsApp Styles */
+    .whatsapp-group-link {
+      display: inline-block;
+      margin-right: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-group-link img {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      vertical-align: middle;
+      border: 2px solid #25D366;
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-group-link:hover img {
+      transform: scale(1.15);
+      box-shadow: 0 3px 8px rgba(37, 211, 102, 0.4);
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    .floating-whatsapp img {
+      width: 65%;
+      height: 65%;
+      border-radius: 50%;
+      padding: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .floating-whatsapp:hover {
+      transform: scale(1.1) translateY(-3px);
+      box-shadow: 0 6px 16px rgba(37, 211, 102, 0.25);
+    }
+
+    @media (max-width: 768px) {
+      .floating-whatsapp {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -241,14 +345,12 @@
   </header>
 
   <nav id="mainNav">
-
-    <nav id="mainNav">
     <a href="index.html">Home</a>
-    
+    <a href="about.html">About Us</a>
     <a href="membership.html">Membership</a>
     <a href="branches.html">Our Campuses</a>
     <a href="news.html">News & Updates</a>
-    <a href="contact.html">Contact Us</a>
+    
     <a href="stories.html">Events</a>
     <a href="constitution.html">Our Constitution</a>
   </nav>
@@ -276,7 +378,13 @@
 
         <div class="info-item">
           <strong>WhatsApp:</strong>
-          <a href="https://wa.me/233557774818" target="_blank" style="color: #001F3F; text-decoration: underline;">Chat on WhatsApp</a>
+          
+          <a href="https://wa.me/233557801755?text=Hello%20BNUTS,%20I%20need%20assistance." target="_blank" aria-label="Chat on WhatsApp">
+           
+           <img src="images/download.png" alt="WhatsApp" width="30" height="30" style="border-radius: 50%; vertical-align: middle;">
+           
+          </a>
+
         </div>
 
         <div class="info-item">
@@ -300,8 +408,8 @@
         <a href="https://tiktok.com/@bnutsgh" target="_blank" aria-label="TikTok" style="display: inline-block; margin-right: 12px;">
           <img src="images/download (1).png" alt="TikTok" width="28" height="28" style="border-radius: 50%; vertical-align: middle;">
         </a>
-        <a href="https://chat.whatsapp.com/EBPOauKwTtt9PZV4ONyWjr?mode=ems_wa_t" target="_blank" aria-label="WhatsApp Group" style="display: inline-block; margin-right: 12px;">
-          <img src="images/download.png" alt="WhatsApp" width="28" height="28" style="border-radius: 50%; vertical-align: middle;">
+        <a href="https://chat.whatsapp.com/EBPOauKwTtt9PZV4ONyWjr?mode=ems_wa_t" target="_blank" aria-label="Join BNUTS WhatsApp Group" class="whatsapp-group-link">
+          <img src="images/download.png" alt="WhatsApp Group" title="Join BNUTS WhatsApp Group">
         </a>
         </div>
       </div>
@@ -309,8 +417,7 @@
       <!-- Contact Form -->
       <div class="card">
         <h2>Send a Message</h2>
-        <!-- 🔗 Replace YOUR_FORM_ID with your actual Formspree ID -->
-        <form action="https://formspree.io/f/mdkwbpaz" method="POST">
+        <form id="contact-form" action="https://formspree.io/f/mdkwbpaz" method="POST">
           <label for="name">Your Name <span style="color:#d32f2f">*</span></label>
           <input type="text" id="name" name="name" required>
 
@@ -324,6 +431,10 @@
           <textarea id="message" name="message" rows="5" required></textarea>
 
           <button type="submit" class="btn">Send Message</button>
+          
+          <div id="success-message" style="display: none; background-color: #4CAF50; color: white; padding: 15px; border-radius: 6px; margin-top: 15px; text-align: center;">
+            Your message has been submitted successfully! We'll get back to you soon.
+          </div>
         </form>
       </div>
     </div>
@@ -379,6 +490,50 @@
  </div>
 
   <script src="js/site.js"></script>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const successMessage = document.getElementById('success-message');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          // Show success message
+          successMessage.style.display = 'block';
+          // Clear form
+          form.reset();
+          // Hide success message after 5 seconds
+          setTimeout(() => {
+            successMessage.style.display = 'none';
+          }, 5000);
+        } else {
+          throw new Error('Form submission failed');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('There was a problem submitting your message. Please try again.');
+      });
+    });
+  </script>
+
+  <!-- Floating WhatsApp Button -->
+<a href="https://wa.me/233557774818?text=Hi%20BNUTS,%20I'm%20interested%20in%20joining!" 
+   target="_blank"
+   class="floating-whatsapp"
+   aria-label="Chat with BNUTS on WhatsApp"
+   title="Chat with BNUTS">
+  <img src="images/download.png" alt="WhatsApp Chat" aria-hidden="true">
+  
+</a>
 
 </body>
 </html>

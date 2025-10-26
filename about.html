@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>bnuts.com/About-Bnuts</title>
+  <title>About-Us</title>
    <link rel="icon" type="image/png" href="images/favicon.png" />
   <style>
     * {
@@ -236,6 +236,43 @@
       text-decoration: underline;
       margin: 0 0.5rem;
     }
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    .floating-whatsapp img {
+      width: 65%;
+      height: 65%;
+      border-radius: 50%;
+      padding: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .floating-whatsapp:hover {
+      transform: scale(1.1) translateY(-3px);
+      box-shadow: 0 6px 16px rgba(37, 211, 102, 0.25);
+    }
+
+    @media (max-width: 768px) {
+      .floating-whatsapp {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -313,7 +350,7 @@
     </div>
 
     <!-- Executives -->
-<div class="card">
+ <div class="card">
   <h2>BNUTS Executive Committee (2024/2025)</h2>
   
   <div class="executive">
@@ -369,7 +406,7 @@
       <div class="executive-institution">AAMUSTED - Kumasi</div>
     </div>
   </div>
-</div>
+ </div>
 
   <footer>
     &copy; 2025 BNUTS. All rights reserved.<br>
@@ -397,7 +434,7 @@
     </div>
   </footer>
   <!-- BNUTS Cookie Notice -->
-<div id="cookie-notice" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#001F3F; color:white; padding:15px; text-align:center; font-size:0.95rem; z-index:9999;">
+ <div id="cookie-notice" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#001F3F; color:white; padding:15px; text-align:center; font-size:0.95rem; z-index:9999;">
   <p style="margin:0;">
     We use cookies to improve your experience and analyze site traffic. By continuing to use this site, you agree to our 
     <a href="privacy.html" style="color:#FFD700; text-decoration:underline;">Privacy Policy</a>.
@@ -405,8 +442,17 @@
   <button id="cookie-accept" style="margin-top:10px; background:#FFD700; color:#001F3F; border:none; padding:6px 16px; border-radius:4px; font-weight:bold; cursor:pointer;">
     Accept
   </button>
-</div>
+ </div>
 
-<script src="js/site.js"></script>
+ <script src="js/site.js"></script>
+
+ <!-- Floating WhatsApp Button -->
+ <a href="https://wa.me/233557774818?text=Hi%20BNUTS,%20I'm%20interested%20in%20joining!" 
+   target="_blank"
+   class="floating-whatsapp"
+   aria-label="Chat with BNUTS on WhatsApp"
+   title="Chat with BNUTS">
+   <img src="images/download.png" alt="WhatsApp Chat" aria-hidden="true">
+  </a>
 </body>
 </html>
